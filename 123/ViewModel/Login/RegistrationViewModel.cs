@@ -16,7 +16,7 @@ namespace _123
         private string password;
         private string message;
   
-        private bool isVisibleProgressBar;
+       
         private bool isOpenDialog;
 
         public string Username
@@ -52,22 +52,7 @@ namespace _123
                 RaisePropertyChanged();
             }
         }
-        //public bool IsVisibleProgressBar
-        //{
-        //    get
-        //    {
-        //        return isVisibleProgressBar;
-        //    }
-        //    set
-        //    {
-        //        if (isVisibleProgressBar == value)
-        //        {
-        //            return;
-        //        }
-        //        isVisibleProgressBar = value;
-        //        RaisePropertyChanged();
-        //    }
-        //}
+        
         /// <summary>
         /// Is Open Dialog 
         /// </summary>
@@ -106,6 +91,19 @@ namespace _123
                 RaisePropertyChanged();
             }
         }
+        private RelayCommand closeDialodCommand;
+        public RelayCommand CloseDialodCommand
+        {
+            get
+            {
+                return closeDialodCommand
+                    ?? (closeDialodCommand = new RelayCommand(
+                    () =>
+                    {
+                        IsOpenDialog = false;
+                    }));
+            }
+        }
         private ICommand _logCommand;
         public ICommand logCommand
         {
@@ -133,16 +131,14 @@ namespace _123
                     (x) =>
                     {
                         
-                        ThreadPool.QueueUserWorkItem(
-                        o =>
-                        {
+                       
                             if (context.Users.FirstOrDefault(x1 => x1.Username == username) != null)
                             {
                                
                                 Message = "Пользователь с таким логином уже зарегистрирован.";
                                 IsOpenDialog = true;
                             }
-                            //ADD VALIDATION HERE
+                            
                             else if (Username != null && Password != null )
                             {
                                ;
@@ -164,10 +160,8 @@ namespace _123
                                 IsOpenDialog = true;
                             }
                         }
-                    );
-                    },
-                    (x1) =>
-                     Username?.Length > 0 && Password?.Length > 0));
+                    ));
+                    
             }
         }
 

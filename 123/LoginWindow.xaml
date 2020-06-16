@@ -26,6 +26,6 @@
             <Button Content="123" Margin="30,0" Style="{StaticResource MaterialDesignRaisedAccentButton}" Command="{Binding Page2Command}"/>
 
         </Grid>
-        <Frame Grid.Row="1" Grid.Column="0" x:Name="MainFrame" Source="View/Page1.xaml"/>
+        <Frame Grid.Row="1" Grid.Column="0" x:Name="MainFrame" Source="View/AddIventPage.xaml"/>
     </Grid>
 </Window>

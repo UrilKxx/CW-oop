@@ -15,10 +15,11 @@ namespace _123
         public string IventName { get; set; }
         public string Description { get; set; }
         public byte[] Image { get; set; }
-        public DateTime IventDate { get; set; }
-        public DateTime IventDateBegin { get; set; }
+        public DateTime IventDateStart { get; set; }
         public DateTime IventDateEnd { get; set; }
-        
+        public IventType IventType { get; set; }
+        public Tag Tag { get; set; }
+
         public int FeedBackId { get; set; }
         [ForeignKey("FeedBackId")]
         public FeedBack FeedBack { get; set; }
@@ -28,12 +29,15 @@ namespace _123
 
         }
 
-        public Ivents(string iventname, string description, byte[] image, DateTime iventDate)
+        public Ivents(string iventname, string description, byte[] image, DateTime iventDateStart, DateTime iventDateEnd, IventType iventType, Tag tag)
         {
             IventName = iventname;
             Description = description;
             Image = image;
-            IventDate = iventDate;
+            IventDateStart = iventDateStart;
+            IventDateEnd = iventDateEnd;
+            IventType = iventType;
+            Tag = tag;
         }
     }
 }

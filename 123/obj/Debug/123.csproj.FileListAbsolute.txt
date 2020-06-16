@@ -100,3 +100,9 @@ D:\Лабы\1111\123\123\obj\Debug\_123.Properties.Resources.resources
 D:\Лабы\1111\123\123\obj\Debug\123.csproj.GenerateResource.cache
 D:\Лабы\1111\123\123\obj\Debug\123.csproj.CopyComplete
 D:\Лабы\1111\123\123\bin\Debug\123.pdb
+D:\Лабы\1111\123\123\obj\Debug\_123.tagsistem.resources
+D:\Лабы\1111\123\123\obj\Debug\_123.addtimetoivents.resources
+D:\Лабы\1111\123\123\obj\Debug\View\IventPage.g.cs
+D:\Лабы\1111\123\123\obj\Debug\View\IventPage.baml
+D:\Лабы\1111\123\123\obj\Debug\View\AddIventPage.g.cs
+D:\Лабы\1111\123\123\obj\Debug\View\AddIventPage.baml

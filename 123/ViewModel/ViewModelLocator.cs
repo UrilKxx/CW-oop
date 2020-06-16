@@ -17,7 +17,17 @@ namespace _123
             SimpleIoc.Default.Register<LoginViewModel>();
             SimpleIoc.Default.Register<RegistrationViewModel>();
             SimpleIoc.Default.Register<AdminViewModel>();
+            SimpleIoc.Default.Register<AddIvetViewModel>();
+
         }
+        public AddIvetViewModel AddIvet
+        {
+            get
+            {
+                return ServiceLocator.Current.GetInstance<AddIvetViewModel>();
+            }
+        }
+
         public AdminViewModel Admin
         {
             get

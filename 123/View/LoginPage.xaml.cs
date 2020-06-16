@@ -4,7 +4,7 @@ using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 
-namespace _123.View
+namespace _123
 {
     /// <summary>
     /// Логика взаимодействия для LoginPage.xaml

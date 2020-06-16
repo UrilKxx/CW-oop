@@ -126,6 +126,11 @@ namespace _123.View
         //    else MessageBox.Show("Enter your username");
            #endregion
         }
+
+        private void loginTextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }
    

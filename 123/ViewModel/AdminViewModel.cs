@@ -14,7 +14,7 @@ namespace _123
                 {
                     _addIventCommand = new RelayCommand(() =>
                     {
-                        Navigate("View/Page2.xaml");
+                        Navigate("View/AddIventPage.xaml");
                     });
                 }
                 return _addIventCommand;
